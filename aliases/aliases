@@ -1,0 +1,8 @@
+alias ls='ls --color=auto'
+alias l='ls -l'
+alias ll='ls -lahF'
+
+alias grep="grep -P -i --color=auto"
+
+alias vim='nvim'
+alias vi='nvim'
