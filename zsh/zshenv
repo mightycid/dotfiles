@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 
-export TERM='screen-256color'
+export TERM='xterm-256color'
 export DOTFILES="$HOME/dotfiles"
-export PERSONAL_PROJECTS="$HOME/Projects/personal"
-export WORK_PROJECTS="$HOME/Projects/work"
+
+[ -f "$DOTFILES/env_config" ] && source "$DOTFILES/env_config"
 
 # XDG
 export XDG_CONFIG_HOME=$HOME/.config

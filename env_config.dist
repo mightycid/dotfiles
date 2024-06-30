@@ -1,0 +1,5 @@
+#!/usr/bin/env zsh
+
+# Copy this file to env_config and define your environment variables that should not be exposed to the outside here.
+# All variables that can be defined are given here with a default value.
+export WORKSPACE="$HOME/Projects"
