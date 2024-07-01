@@ -7,7 +7,7 @@ prompt_git_setup() {
 }
 
 prompt_git_info() {
-    [ ! -z "$vcs_info_msg_0_" ] && echo "%F{white}%f\uE0A0%F{green}$vcs_info_msg_0_%f%F{white}%f"
+    [ ! -z "$vcs_info_msg_0_" ] && echo "%F{green}\ue0b6%f%K{green}%F{black}\ue725 $vcs_info_msg_0_%f%k%F{green}\ue0b4%f"
 }
 
 prompt_precmd() {
@@ -22,7 +22,7 @@ prompt_setup() {
 
     prompt_git_setup
 
-    PROMPT=$'%B%F{cyan}%~%f $(prompt_git_info)%b\n%F{white}%B%(?.%F{magenta}.%F{red})❯%f%b '
+    PROMPT=$'%B%F{blue}%~%f $(prompt_git_info)%b\n%F{white}%(?.%F{cyan}.%F{red})\uf054%f '
 }
 
 prompt_setup
