@@ -37,6 +37,10 @@ source "$DOTFILES/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 # Binding
 source "$DOTFILES/zsh/bindings.zsh"
 
+export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"    # rust package manager
+export PATH="$HOME/.krew/bin:$PATH"     # kubectl plugin manager
+
 # fzf
 if [ $(command -v "fzf") ]; then
     source $DOTFILES/zsh/fzf.zsh
@@ -54,6 +58,3 @@ if [ $(command -v "pyenv") ]; then
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 fi
-
-export PATH="$HOME/.cargo/bin:$PATH"    # rust package manager
-export PATH="$HOME/.krew/bin:$PATH"     # kubectl plugin manager
