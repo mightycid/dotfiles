@@ -545,7 +545,8 @@ end
 local servers = {
   -- clangd = {},
   -- gopls = {},
-  --pyright = {},
+  -- pyright = {},
+  ruff_lsp = {},
   -- rust_analyzer = {},
   -- tsserver = {},
   -- html = { filetypes = { 'html', 'twig', 'hbs'} },
@@ -664,7 +665,7 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
   desc = "Auto-format Python files after saving",
   callback = function()
     local fileName = vim.api.nvim_buf_get_name(0)
-    vim.cmd(":silent !ruff --fix " .. fileName)
+    vim.cmd(":silent !ruff check --fix " .. fileName)
   end,
   group = autocmd_group,
 })
